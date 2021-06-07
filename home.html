@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="global.css">
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+    <script src="convertSelect.js"></script>
+    <link rel="stylesheet" href="convertSelect.css">
+    <title>Roval home page</title>
+</head>
+<body>
+    <header>
+        <div class="navigation-utility">
+            <div class="navigation-utility__headline">FREE NO FAULT CRASH REPLACEMENT GUARANTEE</div>
+            <div class="navigation-utility__links-right links-right">
+                <a href="tel:+1234567890" class="links-right__phone-number">123-456-7890</a>
+                <a href="#" class="links-right__find-dialer">
+                    <img src="icons/icon-geolocation.png" alt="geolocation-icon" class="links-right__find-dialer__icon">
+                    Find a Dealer
+                </a>
+                <div class="links-right__dropdown">
+                    <select
+                          name="account-menu"
+                          id="account-menu"
+                          onChange="window.location.href=this.value"
+                    >
+                        <option value="#">Account</option>
+                        <option value="#">Preference</option>
+                        <option value="#">Help</option>
+                        <option value="#">Logout</option>
+                      </select>
+                </div>
+                <div class="links-right__dropdown">
+                    <select class="vodiapicker">
+                        <option value="en" data-thumbnail="icons/flags/united-states.png"></option>
+                        <option value="ru" data-thumbnail="icons/flags/russia.png"></option>
+                        <option value="ua" data-thumbnail="icons/flags/ukraine.png"></option>
+                    </select>
+                    <div class="lang-select">
+                        <button class="btn-select" value=""></button>
+                        <div class="b">
+                            <ul id="a"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <i class="icon icon-ru"></i>
+</body>
+</html>
