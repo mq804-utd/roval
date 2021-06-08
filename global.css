@@ -4,7 +4,8 @@
 
 */
 body {
-    margin: 0
+    margin: 0;
+    background-color: #dddddd;
 }
 a {
     text-decoration: none;
@@ -40,14 +41,29 @@ header {
 }
 .navigation-utility {
     background-color: black;
-    width: 100%;
+    height: 40px;
     color: white;
     font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation-utility > * {
+    width: 33%;
 }
 .navigation-utility__headline {
     display: inline-block;
     font-family: 'Calibre-Medium', serif;
     line-height: 24px;
+    font-size: 1.01em;
+    padding-left: 102px;
+    padding-top: 10px;
+}
+.navigation-utility__links-right {
+    text-align: end;
+}
+.navigation-utility__empty {
+
 }
 .links-right {
     display: inline-block;
@@ -69,25 +85,45 @@ header {
 }
 .navigation-main {
     height: 65px;
+    display: flex;
+    background-color: white;
 }
+.navigation-main__bar {
+    width: 96%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navigation-main__bar > * {
     display: inline-block;
 }
 .bar__main-logo__logo {
-    height: 22px;
+    height: 20px;
+    margin-top: 4px;
+    margin-left: 31px;
 }
 .bar__links-main {
     font-family: Calibre-Semibold, serif;
-    font-size: 18px;
+    font-size: 1.1em;
+    width: 430px;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-left: -52px;
+    margin-top: 7px;
 }
 .links-main__item {
     display: inline-block;
+
 }
 .links-main__item__content {
     display: none;
 }
 .content__item {
     display: inline-block;
+}
+.bar__search {
+    margin-right: 32px;
 }
 .bar__search > * {
     display: inline-block;
@@ -101,4 +137,17 @@ header {
 .item-shop:hover .content-shop {
     float: none;
     display: inline-block;
+}
+.navigation-main__cart {
+    width: 77px;
+    background-color: black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-clip-path: polygon(16% 0%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(16% 0%, 100% 0, 100% 100%, 0 100%);
+}
+.cart-icon {
+    width: 21px;
+    margin: 11px 0px 0px 5px;
 }

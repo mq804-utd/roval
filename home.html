@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="global.css">
-    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="modules/convertSelect/convertSelect.css">
+    <link rel="stylesheet" href="modules/convertSelect/css/select2.min.css" />
+    <link rel="stylesheet" href="modules/convertSelect/css/convertSelect.css">
+    <script src="modules/jquery-3.6.0.min.js"></script>
+    <script src="modules/convertSelect/js/select2.min.js"></script>
+    <script src="js/accountConvertSelect.js"></script>
+    <script src="js/langConvertSelect.js"></script>
     <title>Roval home page</title>
 </head>
 <body>
     <header>
         <div class="navigation-utility">
+            <div class="navigation-utility__empty"></div>
             <div class="navigation-utility__headline">FREE NO FAULT CRASH REPLACEMENT GUARANTEE</div>
             <div class="navigation-utility__links-right links-right">
                 <a href="tel:+1234567890" class="links-right__phone-number">123-456-7890</a>
@@ -17,33 +22,20 @@
                     <img src="icons/icon-geolocation.png" alt="geolocation-icon" class="links-right__find-dialer__icon">
                     Find a Dealer
                 </a>
-                <div class="links-right__dropdown">
-                    <select
-                          name="account-menu"
-                          id="account-menu"
-                          onChange="window.location.href=this.value"
-                    >
+                <div class="links-right__dropdown" id="account-select">
+                    <select class="js-account_select-single" name="state">
                         <option value="#">Account</option>
                         <option value="#">Preference</option>
                         <option value="#">Help</option>
                         <option value="#">Logout</option>
-                      </select>
+                    </select>
                 </div>
-                <div class="links-right__dropdown">
-                    <form>
-                        <div class="__select" data-state="">
-                            <div class="__select__title"></div>
-                            <div class="__select__content">
-                                <input id="en" class="__select__input" type="radio" name="singleSelect" checked />
-                                <label for="en" tabindex="0" class="__select__label"><img src="icons/flags/united-states.png" alt="usa-icon"></label>
-                                <input id="ru" class="__select__input" type="radio" name="singleSelect" />
-                                <label for="ru" tabindex="0" class="__select__label"><img src="icons/flags/russia.png" alt="rus-icon"></label>
-                                <input id="ua" class="__select__input" type="radio" name="singleSelect" />
-                                <label for="ua" tabindex="0" class="__select__label"><img src="icons/flags/ukraine.png" alt="ua-icon"></label>
-                            </div>
-                        </div>
-                    </form>
-                    <script src="modules/convertSelect/convertSelect.js"></script>
+                <div class="links-right__dropdown" id="lang-select">
+                    <select class="js-lang_select-single" name="state">
+                        <option value="EN"></option>
+                        <option value="RU"></option>
+                        <option value="UA"></option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -132,7 +124,9 @@
                 </div>
             </div>
             <div class="navigation-main__cart">
-                <a href="#"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart-2" viewBox="0 0 24 23"><g fill="none" fill-rule="evenodd"><path d="M0-1h24v24H0z"></path><g fill="#FFF" fill-rule="nonzero"><circle cx="18.412" cy="20.043" r="2.125"></circle><path d="M24 3.243H5.368L4.708 0H0v1.704h3.316l2.473 12.073-.952 3.59h16.635v-1.703H7.053l.495-1.832-.018-.073 14.84-1.21z"></path><circle cx="7.786" cy="20.043" r="2.125"></circle></g></g></svg></a>
+                <a href="#">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart-2 cart-icon" viewBox="0 0 24 23"><g fill="none" fill-rule="evenodd"><path d="M0-1h24v24H0z"></path><g fill="#FFF" fill-rule="nonzero"><circle cx="18.412" cy="20.043" r="2.125"></circle><path d="M24 3.243H5.368L4.708 0H0v1.704h3.316l2.473 12.073-.952 3.59h16.635v-1.703H7.053l.495-1.832-.018-.073 14.84-1.21z"></path><circle cx="7.786" cy="20.043" r="2.125"></circle></g></g></svg>
+                </a>
             </div>
         </div>
     </header>
