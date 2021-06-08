@@ -30,6 +30,11 @@ a {
     src: url("fonts/Calibre-Regular.woff2") format("woff2"),
     url("/fonts/Calibre-Regular.woff") format("woff");
 }
+@font-face {
+    font-family: "Calibre-Semibold";
+    src: url("fonts/Calibre-Semibold.woff2") format("woff2"),
+    url("/fonts/Calibre-Semibold.woff") format("woff");
+}
 header {
     width: 100%;
 }
@@ -52,13 +57,48 @@ header {
 .links-right__find-dialer__icon {
     height: 14px;
 }
-/*.links-right__dropdown {*/
-/*    display: inline-block;*/
-/*    background-color: black;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    width: 70px;*/
-/*    -moz-appearance:none; !* Firefox *!*/
-/*    -webkit-appearance:none; !* Safari and Chrome *!*/
-/*    appearance:none;*/
-/*}*/
+.links-right__dropdown {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 70px;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+.navigation-main {
+    height: 65px;
+}
+.navigation-main__bar > * {
+    display: inline-block;
+}
+.bar__main-logo__logo {
+    height: 22px;
+}
+.bar__links-main {
+    font-family: Calibre-Semibold, serif;
+    font-size: 18px;
+}
+.links-main__item {
+    display: inline-block;
+}
+.links-main__item__content {
+    display: none;
+}
+.content__item {
+    display: inline-block;
+}
+.bar__search > * {
+    display: inline-block;
+}
+.search__icon {
+    width: 16px;
+}
+.search__input {
+    display: none;
+}
+.item-shop:hover .content-shop {
+    float: none;
+    display: inline-block;
+}
