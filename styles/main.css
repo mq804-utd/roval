@@ -1,0 +1,14 @@
+/*
+
+    main
+
+*/
+main {
+    min-height: var(--main-min-height);
+    background: #ddd;
+}
+/*
+
+    main
+    end
+*/

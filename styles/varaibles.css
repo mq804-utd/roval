@@ -1,0 +1,38 @@
+/*
+
+    var
+
+*/
+:root {
+    --header-nav-util-height: 40px;
+    --header-nav-main-height: 65px;
+    --footer-top-height: 230px;
+    --footer-bottom-height: 50px;
+    --footer-top-padding: 40px;
+    --main-min-height: calc(100vh - var(--footer-top-height) - 2*var(--footer-top-padding) - var(--footer-bottom-height))
+}
+@font-face {
+    font-family: "Calibre-Medium";
+    src: url("../fonts/Calibre-Medium.woff2") format("woff2"),
+    url("../fonts/Calibre-BoldItalic.woff") format("woff");
+}
+@font-face {
+    font-family: "Calibre-Regular";
+    src: url("../fonts/Calibre-Regular.woff2") format("woff2"),
+    url("../fonts/Calibre-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Calibre-Semibold";
+    src: url("../fonts/Calibre-Semibold.woff2") format("woff2"),
+    url("../fonts/Calibre-Semibold.woff") format("woff");
+}
+@font-face {
+    font-family: "Calibre-Semibold-Italic";
+    src: url("../fonts/Calibre-SemiboldItalic.woff2") format("woff2"),
+    url("../fonts/Calibre-SemiboldItalic.woff") format("woff");
+}
+/*
+
+    var
+    end
+*/

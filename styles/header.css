@@ -1,0 +1,242 @@
+/*
+
+    header
+
+*/
+header {
+    position: sticky;
+    top: 0;
+}
+/*
+
+    navigation-utility
+
+*/
+.navigation-utility {
+    background-color: black;
+    height: var(--header-nav-util-height);
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    transition: top 0.5s ease;
+    position: absolute;
+}
+.navigation-utility > * {
+    width: 33%;
+}
+.navigation-utility__headline {
+    font-family: 'Calibre-Medium', serif;
+    line-height: 24px;
+    font-size: 1.01em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 17px;
+    padding-top: 10px;
+}
+.links-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: Calibre-Regular, serif;
+    line-height: 16px;
+    margin-right: 13px;
+}
+.links-right > * {
+    width: max-content;
+}
+.links-right__find-dialer__icon {
+    height: 14px;
+    margin-right: 3px;
+}
+.links-right__phone-number {
+    margin-top: 10px;
+    height: 16px;
+    width: 85px;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+    text-align: right;
+    margin-right: 32px;
+}
+.links-right__find-dialer {
+    margin-top: 5px;
+    margin-right: 30px;
+
+}
+.account-dropdown {
+    margin-right: 20px;
+}
+.links-right__dropdown {
+    margin-top: 4px;
+}
+/*
+
+    navigation-utility
+    end
+*/
+
+/*
+
+    navigation-main
+
+*/
+.navigation-main {
+    height: var(--header-nav-main-height);
+    display: flex;
+    background-color: white;
+    top: 40px;
+    transition: top 0.5s ease;
+    position: absolute;
+    width: 100%;
+}
+.navigation-main__bar {
+    width: 96%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bar__main-logo__logo {
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 32px;
+}
+/*
+
+    bar__links-main
+
+*/
+.bar__links-main {
+    font-family: Calibre-Semibold, serif;
+    font-size: 1.1em;
+    width: 430px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+}
+.links-main__item {
+    height: 70%;
+}
+.links-main__item__content {
+    display: flex;
+    justify-content: center;
+    visibility:hidden;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    opacity: 0;
+    background-color: white;
+    transition: all .4s ease;
+    width: 70%;
+    padding: 0 15%;
+    box-shadow: 0 5px 7px rgb(0 0 0 / 50%);
+    font-family: Calibre-Semibold-Italic, serif;
+}
+.content-support {
+    text-align: center;
+}
+.content-support > * {
+    width: auto !important;
+}
+.content__item {
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+}
+.content__item > a > img:first-child {
+    width: 100%;
+    height: 80%;
+}
+.item-shop:hover .content-shop, .content-shop:hover, .item-support:hover .content-support, .content-support:hover, .item-our-story:hover .content-our-story, .content-our-story:hover {
+    visibility: visible;
+    opacity: 1;
+    top: 65px;
+    transition: all .4s ease;
+}
+.bar__links-main:hover .links-main__item {
+    opacity: .5;
+    transition: opacity .5s ease;
+}
+.links-main__item:hover {
+    opacity: 1 !important;
+    transition: opacity .8s ease;
+}
+.links-main__item__content:hover .content__item {
+    opacity: .5;
+    transition: opacity .5s ease;
+}
+.content__item:hover {
+    opacity: 1 !important;
+    transition: opacity .5s ease;
+}
+.content__item__arrow {
+    margin-left: 0;
+    transition: all .3s ease;
+}
+.content__item:hover .content__item__arrow {
+    margin-left: 5px;
+    transition: all .3s ease;
+}
+.content__item__link:hover .content__item__arrow {
+    margin-left: 5px;
+    transition: all .3s ease;
+}
+.gray-text {
+    color: #8D8D8D;
+}
+.content__item__header {
+    display: inherit;
+    line-height: 24px;
+    font-size: 22px;
+}
+.item-links {
+    display: flex;
+    flex-direction: column;
+}
+/*
+
+    bar__links-main
+    end
+*/
+.bar__search {
+    margin-right: 32px;
+}
+.bar__search > * {
+    display: inline-block;
+}
+.search__icon {
+    width: 16px;
+}
+.search__input {
+    display: none;
+}
+.navigation-main__cart {
+    width: 77px;
+    background-color: black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-clip-path: polygon(16% 0%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(16% 0%, 100% 0, 100% 100%, 0 100%);
+}
+.cart-icon {
+    width: 21px;
+    margin: 11px 0 0 5px;
+}
+/*
+
+    navigation-main
+    end
+*/
+
+/*
+
+    header
+    end
+*/
