@@ -9,20 +9,25 @@
     <script src="modules/convertSelect/js/select2.min.js"></script>
     <script src="js/accountConvertSelect.js"></script>
     <script src="js/langConvertSelect.js"></script>
+    <script src="js/navUtilHide.js"></script>
     <title>Roval home page</title>
 </head>
 <body>
     <header>
-        <div class="navigation-utility">
+        <div class="navigation-utility" id="navigation-utility">
             <div class="navigation-utility__empty"></div>
             <div class="navigation-utility__headline">FREE NO FAULT CRASH REPLACEMENT GUARANTEE</div>
             <div class="navigation-utility__links-right links-right">
-                <a href="tel:+1234567890" class="links-right__phone-number">123-456-7890</a>
-                <a href="#" class="links-right__find-dialer">
-                    <img src="icons/icon-geolocation.png" alt="geolocation-icon" class="links-right__find-dialer__icon">
-                    Find a Dealer
-                </a>
-                <div class="links-right__dropdown" id="account-select">
+                <div class="links-right__phone-number">
+                    <a href="tel:+1234567890">123-456-7890</a>
+                </div>
+                <div class="links-right__find-dialer">
+                    <a href="#">
+                        <img src="icons/icon-geolocation.png" alt="geolocation-icon" class="links-right__find-dialer__icon">
+                        Find a Dealer
+                    </a>
+                </div>
+                <div class="links-right__dropdown account-dropdown" id="account-select">
                     <select class="js-account_select-single" name="state">
                         <option value="#">Account</option>
                         <option value="#">Preference</option>
@@ -39,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="navigation-main">
+        <div class="navigation-main" id="navigation-main">
             <div class="navigation-main__bar">
                 <div class="bar__main-logo"><a href="home.html"><img class="bar__main-logo__logo" src="images/roval-logo.png" alt="roval-logo"></a></div>
                 <div class="bar__links-main">
@@ -97,16 +102,16 @@
                         SUPPORT
                         <div class="links-main__item__content content-support">
                             <div class="content__item">
-                                SHIPPING & RETURNS
+                                <a href="#">SHIPPING & RETURNS</a>
                             </div>
                             <div class="content__item">
-                                WARRANTY
+                                <a href="#">WARRANTY</a>
                             </div>
                             <div class="content__item">
-                                FAQS
+                                <a href="#">FAQS</a>
                             </div>
                             <div class="content__item">
-                                CONTACT US
+                                <a href="#">CONTACT US</a>
                             </div>
                         </div>
                     </div>
@@ -130,7 +135,9 @@
             </div>
         </div>
     </header>
-    <main></main>
+    <main>
+
+    </main>
     <footer>
         <div class="footer-top">
             <div class="footer-top__main-logo">

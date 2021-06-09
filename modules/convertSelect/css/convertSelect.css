@@ -2,16 +2,16 @@
     background-color: black !important;
     border: none !important;
 }
+.select2-container {
+    width: inherit !important;
+}
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
     border-color: transparent transparent #ffffff transparent
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     border-color: #ffffff transparent transparent transparent
 }
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-    width: 11px;
-}
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     padding-left: 0;
-    padding-right: 11px;
+    color: white;
 }
