@@ -1,0 +1,46 @@
+.slider__item__img {
+    width: 100%;
+}
+.after-content {
+    font-family: Calibre-Black-Italic, serif;
+    width: 450px;
+    position: absolute;
+    top: 180px;
+    left: 50px;
+}
+.after-content__text {
+    height: 112px;
+    color: #FFFFFF;
+    font-size: 62px;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    line-height: 56px;
+}
+.after-content__button {
+    display: flex !important;
+    justify-content: space-between;
+    height: 48px;
+    width: 214px;
+    cursor: pointer;
+    font: 22px Arial;
+    padding: 1em 2em;
+    text-align: center;
+    color: white;
+    /* "to left" / "to right" - affects initial color */
+    background: #D6161D linear-gradient(to left, #d6161d 50%, #94161b 50%) right;
+    background-size: 200%;
+    transition: .8s ease-out;
+}
+.after-content__button .arrow {
+    width: auto;
+    margin-right: 5px;
+    transition: margin-right .8s ease;
+}
+.after-content__button:hover {
+    background-position: left;
+}
+.after-content__button:hover .arrow{
+    margin-right: 0;
+    transition: margin-right .8s ease;
+}

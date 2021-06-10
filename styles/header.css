@@ -6,6 +6,7 @@
 header {
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 /*
 
@@ -21,9 +22,9 @@ header {
     justify-content: space-between;
     align-items: center;
     top: 0;
+    position: absolute;
     width: 100%;
     transition: top 0.5s ease;
-    position: absolute;
 }
 .navigation-utility > * {
     width: 33%;
@@ -69,11 +70,11 @@ header {
     margin-right: 30px;
 
 }
-.account-dropdown {
-    margin-right: 20px;
-}
 .links-right__dropdown {
     margin-top: 4px;
+}
+.account-dropdown {
+    margin-right: 20px;
 }
 /*
 
@@ -94,6 +95,7 @@ header {
     transition: top 0.5s ease;
     position: absolute;
     width: 100%;
+    border-bottom: #dddddd 1px solid;
 }
 .navigation-main__bar {
     width: 96%;

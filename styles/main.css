@@ -5,7 +5,9 @@
 */
 main {
     min-height: var(--main-min-height);
-    background: #ddd;
+    background: white;
+    z-index: -1;
+    padding: 105px 15% 50px 15%;
 }
 /*
 

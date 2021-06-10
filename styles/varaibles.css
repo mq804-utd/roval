@@ -9,7 +9,7 @@
     --footer-top-height: 230px;
     --footer-bottom-height: 50px;
     --footer-top-padding: 40px;
-    --main-min-height: calc(100vh - var(--footer-top-height) - 2*var(--footer-top-padding) - var(--footer-bottom-height))
+    --main-min-height: calc(100vh - var(--header-nav-util-height) - var(--header-nav-main-height) - var(--footer-top-height) - 2*var(--footer-top-padding) - var(--footer-bottom-height))
 }
 @font-face {
     font-family: "Calibre-Medium";
@@ -30,6 +30,11 @@
     font-family: "Calibre-Semibold-Italic";
     src: url("../fonts/Calibre-SemiboldItalic.woff2") format("woff2"),
     url("../fonts/Calibre-SemiboldItalic.woff") format("woff");
+}
+@font-face {
+    font-family: "Calibre-Black-Italic";
+    src: url("../fonts/Calibre-BlackItalic.woff2") format("woff2"),
+    url("../fonts/Calibre-BlackItalic.woff") format("woff");
 }
 /*
 
