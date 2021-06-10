@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="modules/convertSelect/css/select2.min.css" />
-    <link rel="stylesheet" href="modules/convertSelect/css/convertSelect.css">
-    <link rel="stylesheet" href="modules/slider/chief-slider.css">
-
+    <script src="modules/jquery-3.6.0.min.js"></script>
+    <script src="modules/convertSelect/js/select2.min.js"></script>
+    <script src="js/accountConvertSelect.js"></script>
+    <script src="js/langConvertSelect.js"></script>
+    <script src="js/footerLangConvertSelect.js"></script>
+    <script src="js/navUtilHide.js"></script>
+    <script src="modules/slider/chief-slider.js"></script>
+    <script src="js/sliderConfig.js"></script>
+    <script src="js/search.js"></script>
     <title>Roval home page</title>
 </head>
 <body>
@@ -27,7 +33,7 @@
                 <div class="links-right__dropdown account-dropdown" id="account-select">
                     <select class="js-account_select-single" name="state">
                         <option value="#">Account</option>
-                        <option value="#">Preference</option>
+                        <option value="#">Settings</option>
                         <option value="#">Help</option>
                         <option value="#">Logout</option>
                     </select>
@@ -44,119 +50,125 @@
         <div class="navigation-main" id="navigation-main">
             <div class="navigation-main__bar">
                 <div class="bar__main-logo"><a href="home.html"><img class="bar__main-logo__logo" src="images/roval-logo.png" alt="roval-logo"></a></div>
-                <div class="bar__links-main">
-                    <div class="links-main__item item-shop">
-                        SHOP
-                        <div class="links-main__item__content content-shop">
-                            <div class="content__item">
-                                <a href="#">
-                                    <img src="images/bar-item-road.jpg" alt="bar-item-road">
-                                    <h5 class="content__item__header">ROAD</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                </a>
+                <div id="menuToggle" class="mobile-menu-icon">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu" class="bar__links-main">
+                        <li class="links-main__item item-shop">
+                            SHOP
+                            <div class="links-main__item__content content-shop">
+                                <div class="content__item">
+                                    <a href="#">
+                                        <img src="images/bar-item-road.jpg" alt="bar-item-road">
+                                        <h5 class="content__item__header">ROAD</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
+                                    </a>
+                                </div>
+                                <div class="content__item">
+                                    <a href="#">
+                                        <img src="images/bar-item-gravel.jpg" alt="bar-item-gravel">
+                                        <h5 class="content__item__header">GRAVEL</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
+                                    </a>
+                                </div>
+                                <div class="content__item">
+                                    <a href="#">
+                                        <img src="images/bar-item-xc.jpg" alt="bar-item-xc">
+                                        <h5 class="content__item__header">XC</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
+                                    </a>
+                                </div>
+                                <div class="content__item">
+                                    <a href="#">
+                                        <img src="images/bar-item-trail.jpg" alt="bar-item-trail">
+                                        <h5 class="content__item__header">TRAIL</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
+                                    </a>
+                                </div>
+                                <div class="content__item">
+                                    <a href="#">
+                                        <img src="images/bar-item-triathlon.jpg" alt="bar-item-triathlon">
+                                        <h5 class="content__item__header">TRIATHLON</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
+                                    </a>
+                                </div>
+                                <div class="content__item item-links">
+                                    <a class="content__item__link" href="#">
+                                        <h5 class="content__item__header">Accessories</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
+                                    </a>
+                                    <a class="content__item__link" href="#">
+                                        <h5 class="content__item__header">True Deals</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
+                                        <div class="gray-text">Up to 70% off</div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="content__item">
-                                <a href="#">
-                                    <img src="images/bar-item-gravel.jpg" alt="bar-item-gravel">
-                                    <h5 class="content__item__header">GRAVEL</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                </a>
+                        </li>
+                        <li class="links-main__item item-our-story">
+                            OUR STORY
+                            <div class="links-main__item__content  content-our-story">
+                                <div class="content__item">
+                                    <a href="#">
+                                        <img src="images/bar-item-our-promise.jpg" alt="bar-item-our-promise">
+                                        <h5 class="content__item__header">OUR PROMISE</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
+                                    </a>
+                                </div>
+                                <div class="content__item">
+                                    <a href="#">
+                                        <img src="images/bar-item-our-people.jpg" alt="bar-item-our-people">
+                                        <h5 class="content__item__header">OUR PEOPLE</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right"></a>
+                                </div>
+                                <div class="content__item">
+                                    <a href="#">
+                                        <img src="images/bar-item-our-process.jpg" alt="bar-item-our-process">
+                                        <h5 class="content__item__header">OUR PROCESS</h5>
+                                        <img class="content__item__arrow" src="icons/right.png" alt="right"></a>
+                                </div>
                             </div>
-                            <div class="content__item">
-                                <a href="#">
-                                    <img src="images/bar-item-xc.jpg" alt="bar-item-xc">
-                                    <h5 class="content__item__header">XC</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                </a>
+                        </li>
+                        <li class="links-main__item item-support">
+                            SUPPORT
+                            <div class="links-main__item__content content-support">
+                                <div class="content__item">
+                                    <a href="#">
+                                        SHIPPING & RETURNS
+                                    </a>
+                                </div>
+                                <div class="content__item">
+                                    <a href="#">
+                                        WARRANTY
+                                    </a>
+                                </div>
+                                <div class="content__item">
+                                    <a href="#">
+                                        FAQS
+                                    </a>
+                                </div>
+                                <div class="content__item">
+                                    <a href="#">
+                                        CONTACT US
+                                    </a>
+                                </div>
                             </div>
-                            <div class="content__item">
-                                <a href="#">
-                                    <img src="images/bar-item-trail.jpg" alt="bar-item-trail">
-                                    <h5 class="content__item__header">TRAIL</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                </a>
-                            </div>
-                            <div class="content__item">
-                                <a href="#">
-                                    <img src="images/bar-item-triathlon.jpg" alt="bar-item-triathlon">
-                                    <h5 class="content__item__header">TRIATHLON</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                </a>
-                            </div>
-                            <div class="content__item item-links">
-                                <a class="content__item__link" href="#">
-                                    <h5 class="content__item__header">Accessories</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                </a>
-                                <a class="content__item__link" href="#">
-                                    <h5 class="content__item__header">True Deals</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                    <div class="gray-text">Up to 70% off</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="links-main__item item-our-story">
-                        OUR STORY
-                        <div class="links-main__item__content  content-our-story">
-                            <div class="content__item">
-                                <a href="#">
-                                    <img src="images/bar-item-our-promise.jpg" alt="bar-item-our-promise">
-                                    <h5 class="content__item__header">OUR PROMISE</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                </a>
-                            </div>
-                            <div class="content__item">
-                                <a href="#">
-                                    <img src="images/bar-item-our-people.jpg" alt="bar-item-our-people">
-                                    <h5 class="content__item__header">OUR PEOPLE</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right"></a>
-                            </div>
-                            <div class="content__item">
-                                <a href="#">
-                                    <img src="images/bar-item-our-process.jpg" alt="bar-item-our-process">
-                                    <h5 class="content__item__header">OUR PROCESS</h5>
-                                    <img class="content__item__arrow" src="icons/right.png" alt="right"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="links-main__item item-support">
-                        SUPPORT
-                        <div class="links-main__item__content content-support">
-                            <div class="content__item">
-                                <a href="#">
-                                    SHIPPING & RETURNS
-                                </a>
-                            </div>
-                            <div class="content__item">
-                                <a href="#">
-                                    WARRANTY
-                                </a>
-                            </div>
-                            <div class="content__item">
-                                <a href="#">
-                                    FAQS
-                                </a>
-                            </div>
-                            <div class="content__item">
-                                <a href="#">
-                                    CONTACT US
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="links-main__item item-journal">
-                        <a href="#">
-                            JOURNAL
-                        </a>
-                    </div>
+                        </li>
+                        <li class="links-main__item item-journal">
+                            <a href="#">
+                                JOURNAL
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="bar__search">
-                    <div class="search__icon">
+                <div class="bar__search" id="bar__search">
+                    <div onclick="showSearch()" class="search__icon">
                         <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search-2" viewBox="0 0 16 16"><path d="M10.805 12.131a6.562 6.562 0 1 1 1.326-1.326l3.282 3.282a.938.938 0 0 1-1.326 1.326l-3.282-3.282zm-3.93-.569a4.688 4.688 0 1 0 0-9.375 4.688 4.688 0 0 0 0 9.376z" fill="#414141" fill-rule="nonzero" opacity=".4"></path></svg>
                     </div>
-                    <div class="search__input">
-                        <input type="text">
+                    <div id="search__input" class="search__input">
+                        <input type="text" placeholder="Search">
                     </div>
                 </div>
             </div>
@@ -477,7 +489,7 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-lang-select">
-                <select name="footer-lang" class="js-lang_select-single">
+                <select name="footer-lang" class="js-footer-lang_select-single">
                     <option value="EN"></option>
                     <option value="RU"></option>
                     <option value="UA"></option>

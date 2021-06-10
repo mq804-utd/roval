@@ -4,6 +4,12 @@
 @import "styles/main.css";
 @import "styles/footer.css";
 @import "styles/slider-conf.css";
+@import "modules/convertSelect/css/select2.min.css";
+@import "modules/convertSelect/css/convertSelect.css";
+@import "modules/slider/chief-slider.css";
+@import "styles/mobile.css";
+@import "styles/tablet.css";
+@import "styles/desktop.css";
 
 .button {
     background-color: #4CAF50; /* Green */
