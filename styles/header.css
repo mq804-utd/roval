@@ -103,7 +103,7 @@ header {
     justify-content: center;
     align-items: center;
 }
-#menuToggle {
+#menuToggle > input, #menuToggle > span {
     display: none;
 }
 .bar__main-logo {
@@ -148,6 +148,9 @@ header {
     padding: 0 15%;
     box-shadow: 0 5px 7px rgb(0 0 0 / 50%);
     font-family: Calibre-Semibold-Italic, serif;
+}
+.arrow-menu-mobile {
+    display: none;
 }
 .content-support {
     text-align: center;

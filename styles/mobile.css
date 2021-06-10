@@ -38,7 +38,6 @@
     */
 
     #menuToggle {
-        display: flex;
         flex-direction: column;
         position: relative;
         left: 25px;
@@ -77,44 +76,64 @@
     }
     #menuToggle input:checked ~ span {
         opacity: 1;
-        transform: rotate(45deg) translate(-5px, -5px);
+        transform: rotate(45deg) translate(-3px, -1px);
         background: #36383F;
     }
     #menuToggle input:checked ~ span:nth-last-child(3) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
     }
+
     #menuToggle input:checked ~ span:nth-last-child(2) {
-        transform: rotate(-45deg) translate(-10px, 12px);
+        transform: rotate(-45deg) translate(0, -1px);
     }
     #menu
     {
         display: flex;
         position: absolute;
-        width: 180px;
-        height: 400px;
+        width: 100vw;
         box-shadow: 0 0 10px #85888C;
-        margin: -50px 0 0 -50px;
-        padding: 125px 50px 50px;
+        margin: 23px 0 0 -24px;
         background-color: #F5F6FA;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0 0;
-        transform: translate(-100%, 0);
+        transform: translate(-101%, 0);
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 
     #menu li
     {
-        padding: 10px 0;
         transition-delay: 2s;
     }
 
     #menuToggle input:checked ~ ul
     {
         transform: none;
+
     }
 
-
+    .bar__links-main {
+        height: calc(100vh - var(--header-nav-util-height) - var(--header-nav-main-height));
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .links-main__item {
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100vw - 32px);
+        padding: 16px;
+        border-bottom: #666666 1px solid;
+    }
+    .links-main__item__content {
+        display: none;
+    }
+    .arrow-menu-mobile {
+        display: block;
+        height: 7px;
+    }
     /*
 
         mobile menu
