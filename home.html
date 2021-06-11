@@ -13,6 +13,7 @@
     <script src="modules/slider/chief-slider.js"></script>
     <script src="js/sliderConfig.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/menuMoveElem.js"></script>
     <title>Roval home page</title>
 </head>
 <body>
@@ -58,6 +59,7 @@
                     <ul id="menu" class="bar__links-main">
                         <li class="links-main__item item-shop">
                             SHOP
+                            <input type="checkbox" onclick="moveElement(event.target)"/>
                             <img src="icons/right-arrow.png" class="arrow-menu-mobile">
                             <div class="links-main__item__content content-shop">
                                 <div class="content__item">
@@ -95,21 +97,26 @@
                                         <img class="content__item__arrow" src="icons/right.png" alt="right">
                                     </a>
                                 </div>
-                                <div class="content__item item-links">
-                                    <a class="content__item__link" href="#">
-                                        <h5 class="content__item__header">Accessories</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                    </a>
-                                    <a class="content__item__link" href="#">
-                                        <h5 class="content__item__header">True Deals</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                        <div class="gray-text">Up to 70% off</div>
-                                    </a>
+                                <div class="content__item item-links hide-mobile">
+                                    <div style="display: block; margin-bottom: 10px">
+                                        <a class="content__item__link" href="#">
+                                            <h5 class="content__item__header">Accessories</h5>
+                                            <img class="content__item__arrow" src="icons/right.png" alt="right">
+                                        </a>
+                                    </div>
+                                    <div style="display: block">
+                                        <a class="content__item__link" href="#">
+                                            <h5 class="content__item__header">True Deals</h5>
+                                            <img class="content__item__arrow" src="icons/right.png" alt="right"><br/>
+                                            <div class="gray-text">Up to 70% off</div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li class="links-main__item item-our-story">
                             OUR STORY
+                            <input type="checkbox" onclick="moveElement(event.target)"/>
                             <img src="icons/right-arrow.png" class="arrow-menu-mobile">
                             <div class="links-main__item__content  content-our-story">
                                 <div class="content__item">
@@ -135,6 +142,7 @@
                         </li>
                         <li class="links-main__item item-support">
                             SUPPORT
+                            <input type="checkbox" onclick="moveElement(event.target)"/>
                             <img src="icons/right-arrow.png" class="arrow-menu-mobile">
                             <div class="links-main__item__content content-support">
                                 <div class="content__item">
@@ -162,6 +170,22 @@
                         <li class="links-main__item item-journal">
                             <a href="#">
                                 JOURNAL
+                            </a>
+                        </li>
+                        <li class="links-main__item mobile-links-main__item gray-bacolor">
+                            <a href="#">
+                                <img src="icons/icon-geolocation.png" alt="geolocation-icon" class="links-right__find-dialer__icon black-image">
+                                FIND A DEALER
+                            </a>
+                        </li>
+                        <li class="links-main__item mobile-links-main__item gray-bacolor">
+                            <a href="#">
+                                LOGIN/SIGN UP
+                            </a>
+                        </li>
+                        <li class="links-main__item mobile-links-main__item">
+                            <a href="tel:+1234567890">
+                                <span class="gray-text">CALL US AT:</span><span>&nbsp 123-456-7890</span>
                             </a>
                         </li>
                     </ul>
