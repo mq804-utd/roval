@@ -42,11 +42,11 @@ footer {
     height: 24px;
 }
 .social-links__link > * {
-    transition: filter .4s ease;
+    transition: var(--default-transition-for-animation);
 }
 .social-links__link:hover > * {
     filter: brightness(3) contrast(3);
-    transition: filter .6s ease;
+    transition: var(--default-transition-for-animation);
 }
 .footer-links__col {
     height: 28px;
