@@ -6,7 +6,7 @@ function formatState (state) {
 }
 $(document).ready(function() {
     $(footerLangSelect).select2({
-        width: '42px',
+        width: '50px',
         templateResult: formatState,
         templateSelection: formatState,
         minimumResultsForSearch : Infinity,

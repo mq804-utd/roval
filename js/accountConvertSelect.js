@@ -4,7 +4,7 @@ function accountFormatState (state) {
 }
 $(document).ready(function() {
     $(accountSingle).select2({
-        width: '70px',
+        width: '80px',
         templateSelection: accountFormatState,
         minimumResultsForSearch : Infinity,
     });

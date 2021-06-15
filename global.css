@@ -7,18 +7,3 @@
 @import "modules/convertSelect/css/select2.min.css";
 @import "modules/convertSelect/css/convertSelect.css";
 @import "modules/slider/chief-slider.css";
-@import "styles/mobile.css";
-@import "styles/tablet.css";
-@import "styles/desktop.css";
-@import "styles/mobileNtablet.css";
-
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}

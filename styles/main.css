@@ -3,11 +3,46 @@
     main
 
 */
-main {
-    min-height: var(--main-min-height);
+.main {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
     background: white;
-    z-index: -1;
-    padding: var(--main-top-padding) 15% var(--main-bottom-padding) 15%;
+    flex-grow: 1;
+}
+
+@media only screen and (max-device-width : 767px) {
+
+    .main {
+        min-height: var(--mobile-main-min-height);
+        padding:
+                var(--mobile-main-top-padding)
+                0
+                var(--mobile-main-bottom-padding)
+                0;
+    }
+    .slider__item__img {
+        height: 280px;
+    }
+    .after-content {
+        width: 100%;
+        position: initial;
+        padding: 24px 15px;
+    }
+    .after-content__text {
+        height: auto;
+        color: black;
+        line-height: 32px;
+        font-size: 40px;
+        width: 50%;
+        margin-bottom: 24px;
+    }
+}
+
+@media only screen and (min-device-width : 767px) and (max-device-width : 1240px) {
+    .after-content {
+        top: 100px;
+    }
 }
 /*
 
