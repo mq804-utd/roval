@@ -1,117 +1,38 @@
-/*
-
-    var
-
-*/
 :root {
     --default-transition-for-animation: all 0.5s ease;
     --max-width: 1440px;
-    /*
-        desktop variables
-    */
-    --header-nav-util-height: 40px;
-    --header-nav-main-height: 65px;
-    --main-top-padding: calc(
-            var(--header-nav-util-height)
-            + var(--header-nav-main-height)
-    );
-    --main-bottom-padding: 50px;
-    --footer-top-padding: 40px;
-    --footer-top-height: calc(
-            310px
-            - 2 * var(--footer-top-padding)
-    );
-    --footer-bottom-height: 50px;
-    --main-min-height: calc(
-            100vh
-            - var(--main-top-padding)
-            - var(--main-bottom-padding)
-            - var(--footer-top-height)
-            - 2 * var(--footer-top-padding)
-            - var(--footer-bottom-height)
-            - 1px
-    );
-    /*
-        mobile variables
-    */
-    --mobile-header-nav-util-height: 32px;
-    --mobile-header-nav-main-height: 56px;
-    --mobile-main-top-padding: calc(
-            var(--mobile-header-nav-util-height)
-            + var(--mobile-header-nav-main-height)
-    );
-    --mobile-main-bottom-padding: 50px;
-    --mobile-footer-top-padding: 40px;
-    --mobile-footer-top-height: calc(
-            680px
-            - 2 * var(--mobile-footer-top-padding)
-    );
-    --mobile-footer-bottom-height: 50px;
-    --mobile-main-min-height: calc(
-            100vh
-            - var(--mobile-main-top-padding)
-            - var(--mobile-main-bottom-padding)
-            - var(--mobile-footer-top-height)
-            - 2 * var(--mobile-footer-top-padding)
-            - var(--mobile-footer-bottom-height)
-            - 1px
-    );
-    /*
-        tablet variables
-    */
-    --tablet-header-nav-util-height: 32px;
-    --tablet-header-nav-main-height: 56px;
-    --tablet-main-top-padding: calc(
-            var(--tablet-header-nav-util-height)
-            + var(--tablet-header-nav-main-height)
-    );
-    --tablet-main-bottom-padding: 50px;
-    --tablet-footer-top-padding: 40px;
-    --tablet-footer-top-height: calc(
-            530px
-            - 2 * var(--tablet-footer-top-padding)
-    );
-    --tablet-footer-bottom-height: 50px;
-    --tablet-main-min-height: calc(
-            100vh
-            - var(--tablet-main-top-padding)
-            - var(--tablet-main-bottom-padding)
-            - var(--tablet-footer-top-height)
-            - 2 * var(--tablet-footer-top-padding)
-            - var(--tablet-footer-bottom-height)
-            - 1px
-    )
 }
+
 /*
-    fonts
+    FONTS
 */
+
 @font-face {
     font-family: "Calibre-Medium";
     src: url("../fonts/Calibre-Medium.woff2") format("woff2"),
     url("../fonts/Calibre-BoldItalic.woff") format("woff");
 }
+
 @font-face {
     font-family: "Calibre-Regular";
     src: url("../fonts/Calibre-Regular.woff2") format("woff2"),
     url("../fonts/Calibre-Regular.woff") format("woff");
 }
+
 @font-face {
     font-family: "Calibre-Semibold";
     src: url("../fonts/Calibre-Semibold.woff2") format("woff2"),
     url("../fonts/Calibre-Semibold.woff") format("woff");
 }
+
 @font-face {
     font-family: "Calibre-Semibold-Italic";
     src: url("../fonts/Calibre-SemiboldItalic.woff2") format("woff2"),
     url("../fonts/Calibre-SemiboldItalic.woff") format("woff");
 }
+
 @font-face {
     font-family: "Calibre-Black-Italic";
     src: url("../fonts/Calibre-BlackItalic.woff2") format("woff2"),
     url("../fonts/Calibre-BlackItalic.woff") format("woff");
 }
-/*
-
-    var
-    end
-*/
