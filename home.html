@@ -11,27 +11,36 @@
     <script src="js/footerLangConvertSelect.js"></script>
     <script src="js/navUtilHide.js"></script>
     <script src="modules/slider/chief-slider.js"></script>
-    <script src="js/sliderConfig.js"></script>
+    <script src="js/sliderConfig.js" type="module"></script>
     <script src="js/search.js"></script>
     <script src="js/menuMoveElem.js"></script>
+    <script src="js/mobileMenu.js"></script>
     <title>Roval home page</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="navigation-utility" id="navigation-utility">
+
             <div class="navigation-utility__empty"></div>
-            <div class="navigation-utility__headline">FREE NO FAULT CRASH REPLACEMENT GUARANTEE</div>
+
+            <div class="navigation-utility__headline">
+                FREE NO FAULT CRASH REPLACEMENT GUARANTEE
+            </div>
+
             <div class="navigation-utility__links-right links-right">
-                <div class="links-right__phone-number">
+
+                <div class="links-right__phone-number links-right__item">
                     <a href="tel:+1234567890">123-456-7890</a>
                 </div>
-                <div class="links-right__find-dialer">
-                    <a href="#">
+
+                <div class="links-right__find-dialer links-right__item">
+                    <a href="#" target="_blank">
                         <img src="icons/icon-geolocation.png" alt="geolocation-icon" class="links-right__find-dialer__icon">
                         Find a Dealer
                     </a>
                 </div>
-                <div class="links-right__dropdown account-dropdown" id="account-select">
+
+                <div class="links-right__dropdown account-dropdown links-right__item" id="account-select">
                     <select class="js-account_select-single" name="state">
                         <option value="#">Account</option>
                         <option value="#">Settings</option>
@@ -39,7 +48,8 @@
                         <option value="#">Logout</option>
                     </select>
                 </div>
-                <div class="links-right__dropdown" id="lang-select">
+
+                <div class="links-right__dropdown links-right__item" id="lang-select">
                     <select class="js-lang_select-single" name="state">
                         <option value="EN"></option>
                         <option value="RU"></option>
@@ -48,166 +58,214 @@
                 </div>
             </div>
         </div>
+
         <div class="navigation-main" id="navigation-main">
-            <div class="navigation-main__bar">
-                <div class="bar__main-logo"><a href="home.html"><img class="bar__main-logo__logo" src="images/roval-logo.png" alt="roval-logo"></a></div>
-                <div id="menuToggle" class="mobile-menu-icon">
-                    <input type="checkbox" id="menuToggle__checkbox"/>
-                    <div class="backdrop" id="backdrop"></div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <ul id="menu" class="bar__links-main">
-                        <li class="links-main__item item-shop">
-                            SHOP
-                            <input type="checkbox" onclick="moveElement(event.target)"/>
-                            <img src="icons/right-arrow.png" class="arrow-menu-mobile">
-                            <div class="links-main__item__content content-shop">
-                                <div class="content__item">
-                                    <a href="#">
-                                        <img src="images/bar-item-road.jpg" alt="bar-item-road">
-                                        <h5 class="content__item__header">ROAD</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                    </a>
-                                </div>
-                                <div class="content__item">
-                                    <a href="#">
-                                        <img src="images/bar-item-gravel.jpg" alt="bar-item-gravel">
-                                        <h5 class="content__item__header">GRAVEL</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                    </a>
-                                </div>
-                                <div class="content__item">
-                                    <a href="#">
-                                        <img src="images/bar-item-xc.jpg" alt="bar-item-xc">
-                                        <h5 class="content__item__header">XC</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                    </a>
-                                </div>
-                                <div class="content__item">
-                                    <a href="#">
-                                        <img src="images/bar-item-trail.jpg" alt="bar-item-trail">
-                                        <h5 class="content__item__header">TRAIL</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                    </a>
-                                </div>
-                                <div class="content__item">
-                                    <a href="#">
-                                        <img src="images/bar-item-triathlon.jpg" alt="bar-item-triathlon">
-                                        <h5 class="content__item__header">TRIATHLON</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                    </a>
-                                </div>
-                                <div class="content__item item-links hide-mobile">
-                                    <div style="display: block; margin-bottom: 10px">
-                                        <a class="content__item__link" href="#">
-                                            <h5 class="content__item__header">Accessories</h5>
-                                            <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                        </a>
-                                    </div>
-                                    <div style="display: block">
-                                        <a class="content__item__link" href="#">
-                                            <h5 class="content__item__header">True Deals</h5>
-                                            <img class="content__item__arrow" src="icons/right.png" alt="right"><br/>
-                                            <div class="gray-text">Up to 70% off</div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="links-main__item item-our-story">
-                            OUR STORY
-                            <input type="checkbox" onclick="moveElement(event.target)"/>
-                            <img src="icons/right-arrow.png" class="arrow-menu-mobile">
-                            <div class="links-main__item__content  content-our-story">
-                                <div class="content__item">
-                                    <a href="#">
-                                        <img src="images/bar-item-our-promise.jpg" alt="bar-item-our-promise">
-                                        <h5 class="content__item__header">OUR PROMISE</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right">
-                                    </a>
-                                </div>
-                                <div class="content__item">
-                                    <a href="#">
-                                        <img src="images/bar-item-our-people.jpg" alt="bar-item-our-people">
-                                        <h5 class="content__item__header">OUR PEOPLE</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right"></a>
-                                </div>
-                                <div class="content__item">
-                                    <a href="#">
-                                        <img src="images/bar-item-our-process.jpg" alt="bar-item-our-process">
-                                        <h5 class="content__item__header">OUR PROCESS</h5>
-                                        <img class="content__item__arrow" src="icons/right.png" alt="right"></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="links-main__item item-support">
-                            SUPPORT
-                            <input type="checkbox" onclick="moveElement(event.target)"/>
-                            <img src="icons/right-arrow.png" class="arrow-menu-mobile">
-                            <div class="links-main__item__content content-support">
-                                <div class="content__item">
-                                    <a href="#">
-                                        SHIPPING & RETURNS
-                                    </a>
-                                </div>
-                                <div class="content__item">
-                                    <a href="#">
-                                        WARRANTY
-                                    </a>
-                                </div>
-                                <div class="content__item">
-                                    <a href="#">
-                                        FAQS
-                                    </a>
-                                </div>
-                                <div class="content__item">
-                                    <a href="#">
-                                        CONTACT US
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="links-main__item item-journal">
-                            <a href="#">
-                                JOURNAL
-                            </a>
-                        </li>
-                        <li class="links-main__item mobile-links-main__item gray-bacolor">
-                            <a href="#">
-                                <img src="icons/icon-geolocation.png" alt="geolocation-icon" class="links-right__find-dialer__icon black-image">
-                                FIND A DEALER
-                            </a>
-                        </li>
-                        <li class="links-main__item mobile-links-main__item gray-bacolor">
-                            <a href="#">
-                                LOGIN/SIGN UP
-                            </a>
-                        </li>
-                        <li class="links-main__item mobile-links-main__item">
-                            <a href="tel:+1234567890">
-                                <span class="gray-text">CALL US AT:</span><span>&nbsp 123-456-7890</span>
-                            </a>
-                        </li>
-                    </ul>
+
+            <div class="header-logo">
+                    <a href="home.html"><img class="header-logo__logo" src="images/roval-logo.png" alt="roval-logo"></a>
                 </div>
-                <div class="bar__search" id="bar__search">
-                    <div onclick="showSearch()" class="search__icon">
-                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search-2" viewBox="0 0 16 16"><path d="M10.805 12.131a6.562 6.562 0 1 1 1.326-1.326l3.282 3.282a.938.938 0 0 1-1.326 1.326l-3.282-3.282zm-3.93-.569a4.688 4.688 0 1 0 0-9.375 4.688 4.688 0 0 0 0 9.376z" fill="#414141" fill-rule="nonzero" opacity=".4"></path></svg>
-                    </div>
-                    <div id="search__input" class="search__input">
-                        <input type="text" placeholder="Search">
-                    </div>
-                </div>
-            </div>
-            <div class="navigation-main__cart">
-                <a href="#">
-                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart-2 cart-icon" viewBox="0 0 24 23"><g fill="none" fill-rule="evenodd"><path d="M0-1h24v24H0z"></path><g fill="#FFF" fill-rule="nonzero"><circle cx="18.412" cy="20.043" r="2.125"></circle><path d="M24 3.243H5.368L4.708 0H0v1.704h3.316l2.473 12.073-.952 3.59h16.635v-1.703H7.053l.495-1.832-.018-.073 14.84-1.21z"></path><circle cx="7.786" cy="20.043" r="2.125"></circle></g></g></svg>
+
+            <nav class="navigation">
+
+                <a href="#" class="nav-logo" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </a>
+
+                <ul class="menu">
+                    <li class="menu__item">
+
+                        <button class="first-level-menu" onclick="showSecondLevel(event.target)">
+                            SHOP
+                            <span class="mobile-arrow"><img src="icons/right-arrow.png" alt=""></span>
+                        </button>
+
+                        <ul class="menu__item-content content-shop">
+
+                            <button class="second-level-menu" onclick="hideSecondLevel()">
+                                <span class="mobile-arrow-back"><img src="icons/right.png" alt=""></span>
+                                SHOP
+                            </button>
+
+                            <li class="content__item">
+                                <a class="content__item-link" href="#" target="_blank">
+                                    <img src="images/bar-item-road.jpg" alt="bar-item-road">
+                                    <h5 class="content__item__header">ROAD</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right">
+                                </a>
+                            </li>
+
+                            <li class="content__item">
+                                <a class="content__item-link" href="#" target="_blank">
+                                    <img src="images/bar-item-gravel.jpg" alt="bar-item-gravel">
+                                    <h5 class="content__item__header">GRAVEL</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right">
+                                </a>
+                            </li>
+
+                            <li class="content__item">
+                                <a class="content__item-link" href="#" target="_blank">
+                                    <img src="images/bar-item-xc.jpg" alt="bar-item-xc">
+                                    <h5 class="content__item__header">XC</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right">
+                                </a>
+                            </li>
+
+                            <li class="content__item">
+                                <a class="content__item-link" href="#" target="_blank">
+                                    <img src="images/bar-item-trail.jpg" alt="bar-item-trail">
+                                    <h5 class="content__item__header">TRAIL</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right">
+                                </a>
+                            </li>
+
+                            <li class="content__item">
+                                <a class="content__item-link" href="#" target="_blank">
+                                    <img src="images/bar-item-triathlon.jpg" alt="bar-item-triathlon">
+                                    <h5 class="content__item__header">TRIATHLON</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right">
+                                </a>
+                            </li>
+
+                            <li class="content__item item-links">
+                                <a href="#">
+                                    <h5 class="content__item__header">ACCESSORIES</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right">
+                                </a>
+
+                                <a href="#">
+                                    <h5 class="content__item__header">TRUE DEALS</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right"><br/>
+                                    <div class="gray-text">Up to 70% off</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item">
+
+                        <button class="first-level-menu" onclick="showSecondLevel(event.target)">
+                            OUR STORY
+                            <span class="mobile-arrow"><img src="icons/right-arrow.png" alt=""></span>
+                        </button>
+
+                        <ul class="menu__item-content  content-our-story">
+
+                            <button class="second-level-menu" onclick="hideSecondLevel()">
+                                <span class="mobile-arrow-back"><img src="icons/right.png" alt=""></span>
+                                OUR STORY
+                            </button>
+
+                            <li class="content__item">
+                                <a class="content__item-link" href="#" target="_blank">
+                                    <img src="images/bar-item-our-promise.jpg" alt="bar-item-our-promise">
+                                    <h5 class="content__item__header">OUR PROMISE</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right">
+                                </a>
+                            </li>
+
+                            <li class="content__item">
+                                <a class="content__item-link" href="#" target="_blank">
+                                    <img src="images/bar-item-our-people.jpg" alt="bar-item-our-people">
+                                    <h5 class="content__item__header">OUR PEOPLE</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right">
+                                </a>
+                            </li>
+
+                            <li class="content__item">
+                                <a class="content__item-link" href="#" target="_blank">
+                                    <img src="images/bar-item-our-process.jpg" alt="bar-item-our-process">
+                                    <h5 class="content__item__header">OUR PROCESS</h5>
+                                    <img class="content__item-arrow" src="icons/right.png" alt="right">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item">
+
+                        <button class="first-level-menu" onclick="showSecondLevel(event.target)">
+                            SUPPORT
+                            <span class="mobile-arrow"><img src="icons/right-arrow.png" alt=""></span>
+                        </button>
+
+                        <ul class="menu__item-content content-support">
+
+                            <button class="second-level-menu" onclick="hideSecondLevel()">
+                                <span class="mobile-arrow-back"><img src="icons/right.png" alt=""></span>
+                                SUPPORT
+                            </button>
+
+                            <li class="content__item">
+                                <a href="#" target="_blank">
+                                    SHIPPING & RETURNS
+                                </a>
+                            </li>
+
+                            <li class="content__item">
+                                <a href="#" target="_blank">
+                                    WARRANTY
+                                </a>
+                            </li>
+
+                            <li class="content__item">
+                                <a href="#" target="_blank">
+                                    FAQS
+                                </a>
+                            </li>
+
+                            <li class="content__item">
+                                <a href="#" target="_blank">
+                                    CONTACT US
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item">
+                        <a href="#" target="_blank">
+                            <span>JOURNAL</span>
+                        </a>
+                    </li>
+
+                    <li class="menu__item mobile-links-main__item gray-bacolor">
+                        <a href="#" target="_blank">
+                            <img src="icons/icon-geolocation.png" alt="geolocation-icon" class="links-right__find-dialer__icon black-image">
+                            FIND A DEALER
+                        </a>
+                    </li>
+
+                    <li class="menu__item mobile-links-main__item gray-bacolor">
+                        <a href="#" target="_blank">
+                            LOGIN/SIGN UP
+                        </a>
+                    </li>
+
+                    <li class="menu__item mobile-links-main__item">
+                        <a href="tel:+1234567890">
+                            <span class="gray-text">CALL US AT:</span><span>&nbsp 123-456-7890</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="backdrop"></div>
+            </nav>
+
+            <div class="capabilities">
+
+                <div class="search" id="search">
+                    <button onclick="showSearch()" class="search__icon button"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search-2" viewBox="0 0 16 16"><path d="M10.805 12.131a6.562 6.562 0 1 1 1.326-1.326l3.282 3.282a.938.938 0 0 1-1.326 1.326l-3.282-3.282zm-3.93-.569a4.688 4.688 0 1 0 0-9.375 4.688 4.688 0 0 0 0 9.376z" fill="#414141" fill-rule="nonzero" opacity=".4"></path></svg></button>
+                    <input type="text" placeholder="Search" id="search__input">
+                </div>
+
+                <div class="cart">
+                    <a href="#" target="_blank"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart-2 cart-icon" viewBox="0 0 24 23"><g fill="none" fill-rule="evenodd"><path d="M0-1h24v24H0z"></path><g fill="#FFF" fill-rule="nonzero"><circle cx="18.412" cy="20.043" r="2.125"></circle><path d="M24 3.243H5.368L4.708 0H0v1.704h3.316l2.473 12.073-.952 3.59h16.635v-1.703H7.053l.495-1.832-.018-.073 14.84-1.21z"></path><circle cx="7.786" cy="20.043" r="2.125"></circle></g></g></svg></a>
+                </div>
             </div>
         </div>
     </header>
-    <main>
+    <main class="main">
         <div class="slider">
             <div class="slider__container">
                 <div class="slider__wrapper">
@@ -215,10 +273,8 @@
                         <div class="slider__item">
                             <img class="slider__item__img" src="images/slider-1.jpg">
                             <div class="after-content">
-                                <div class="after-content__text">
-                                    SEEK AND ENJOY
-                                </div>
-                                <a href="#">
+                                <div class="after-content__text">SEEK AND ENJOY</div>
+                                <a href="#" target="_blank">
                                     <button class="button after-content__button">
                                         READ MORE
                                         <img class="arrow" src="icons/right.png" alt="right">
@@ -232,7 +288,7 @@
                                 <div class="after-content__text">
                                     SEEK AND ENJOY
                                 </div>
-                                <a href="#">
+                                <a href="#" target="_blank">
                                     <button class="button after-content__button">
                                         READ MORE
                                         <img class="arrow" src="icons/right.png" alt="right">
@@ -246,7 +302,7 @@
                                 <div class="after-content__text">
                                     SEEK AND ENJOY
                                 </div>
-                                <a href="#">
+                                <a href="#" target="_blank">
                                     <button class="button after-content__button">
                                         READ MORE
                                         <img class="arrow" src="icons/right.png" alt="right">
@@ -257,68 +313,87 @@
                     </div>
                 </div>
             </div>
+
             <!-- Кнопки для перехода к предыдущему и следующему слайду -->
             <a href="#" class="slider__control" data-slide="prev"></a>
             <a href="#" class="slider__control" data-slide="next"></a>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
+
         <div class="footer-top">
+
             <div class="footer-top__main-logo">
-                <a href="/home.html"><img src="images/roval-logo-white.png" alt="roval-logo"></a>
+                <a href="/home.html"><img class="footer-logo" src="images/roval-logo-white.png" alt="roval-logo"></a>
             </div>
+
             <div class="footer-links">
+
                 <div class="footer-links__col">
+
                     <h6 class="footer-links__col__header">SHOP</h6>
+
                     <ul>
-                        <li class="footer-links__col__item"><a href="#">Road</a></li>
-                        <li class="footer-links__col__item"><a href="#">Gravel</a></li>
-                        <li class="footer-links__col__item"><a href="#">XC</a></li>
-                        <li class="footer-links__col__item"><a href="#">Trail</a></li>
-                        <li class="footer-links__col__item"><a href="#">Triathlon</a></li>
-                        <li class="footer-links__col__item"><a href="#">Accessories</a></li>
-                        <li class="footer-links__col__item"><a href="#">True Deals</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Road</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Gravel</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">XC</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Trail</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Triathlon</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Accessories</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">True Deals</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-links__col">
+
                     <h6 class="footer-links__col__header">OUR STORY</h6>
+
                     <ul>
-                        <li class="footer-links__col__item"><a href="#">Our Promise</a></li>
-                        <li class="footer-links__col__item"><a href="#">Our People</a></li>
-                        <li class="footer-links__col__item"><a href="#">Our Process</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Our Promise</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Our People</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Our Process</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-links__col">
+
                     <h6 class="footer-links__col__header">SUPPORT</h6>
+
                     <ul>
-                        <li class="footer-links__col__item"><a href="#">Shipping & Returns</a></li>
-                        <li class="footer-links__col__item"><a href="#">Support Policies</a></li>
-                        <li class="footer-links__col__item"><a href="#">FAQs</a></li>
-                        <li class="footer-links__col__item"><a href="#">Product Registration</a></li>
-                        <li class="footer-links__col__item"><a href="#">Contact Us</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Shipping & Returns</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Support Policies</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">FAQs</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Product Registration</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Contact Us</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-links__col">
+
                     <h6 class="footer-links__col__header">HELPFUL LINKS</h6>
+
                     <ul>
-                        <li class="footer-links__col__item"><a href="#">Privacy Policy</a></li>
-                        <li class="footer-links__col__item"><a href="#">Terms of Use</a></li>
-                        <li class="footer-links__col__item"><a href="#">Wholesale Login</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Privacy Policy</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Terms of Use</a></li>
+                        <li class="footer-links__col-item"><a href="#" target="_blank">Wholesale Login</a></li>
                     </ul>
                 </div>
-                <div class="footer-links__col">
+
+                <div class="footer-links__col social-links">
+
                     <h6 class="footer-links__col__header">FOLLOW US</h6>
+
                     <ul>
-                        <li class="footer-links__col__item social-links">
-                            <a href="#" class="social-links__link"><img src="icons/icon-facebook.svg" alt="facebook"></a>
-                            <a href="#" class="social-links__link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-instagram" viewBox="0 0 24 24" style="width: 24px"><g fill="#8D8D8D" fill-rule="nonzero"><path d="M12 2.182c3.196 0 3.575.011 4.839.07 1.168.053 1.803.25 2.224.415.558.217.958.477 1.376.894.417.418.677.818.894 1.376.165.42.358 1.056.414 2.224.057 1.264.07 1.643.07 4.839 0 3.196-.01 3.575-.07 4.839-.052 1.168-.249 1.803-.414 2.224a3.721 3.721 0 0 1-.894 1.376 3.721 3.721 0 0 1-1.376.894c-.42.165-1.056.358-2.224.414-1.264.057-1.643.07-4.839.07-3.196 0-3.575-.01-4.839-.07-1.168-.052-1.803-.249-2.224-.414a3.721 3.721 0 0 1-1.376-.894 3.721 3.721 0 0 1-.894-1.376c-.165-.42-.358-1.056-.414-2.224-.057-1.264-.07-1.643-.07-4.839 0-3.196.01-3.575.07-4.839.052-1.168.249-1.803.414-2.224.217-.558.477-.958.894-1.376a3.721 3.721 0 0 1 1.376-.894c.42-.165 1.056-.358 2.224-.414 1.264-.06 1.643-.07 4.839-.07zm0-2.157c-3.253 0-3.66.014-4.937.073-1.274.06-2.144.26-2.909.558a5.78 5.78 0 0 0-2.119 1.38A5.895 5.895 0 0 0 .653 4.157C.358 4.919.154 5.789.095 7.067.035 8.344.02 8.75.02 12.004c0 3.252.014 3.66.074 4.936.06 1.274.26 2.144.558 2.91a5.853 5.853 0 0 0 1.382 2.115 5.895 5.895 0 0 0 2.123 1.382c.761.295 1.631.499 2.909.558 1.277.06 1.684.074 4.937.074 3.252 0 3.66-.014 4.936-.074 1.274-.06 2.144-.26 2.91-.558a5.853 5.853 0 0 0 2.115-1.382 5.895 5.895 0 0 0 1.382-2.123c.295-.761.499-1.631.558-2.909.06-1.277.074-1.684.074-4.937 0-3.252-.014-3.66-.074-4.936-.06-1.274-.26-2.144-.558-2.91a5.853 5.853 0 0 0-1.382-2.115A5.895 5.895 0 0 0 19.842.653c-.761-.295-1.631-.499-2.909-.558C15.66.039 15.253.025 12 .025z"></path><path d="M12 5.85a6.152 6.152 0 1 0 .001 12.302A6.152 6.152 0 0 0 12 5.85zm0 10.143a3.993 3.993 0 1 1 0-7.986 3.993 3.993 0 0 1 0 7.986z"></path><circle cx="18.393" cy="5.607" r="1.439"></circle></g></svg></a>
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="social-links__link"><img src="icons/icon-youtube.svg" alt="youtube"></a>
-                        </li>
+                        <li class="footer-links__col-item"><a href="https://facebook.com" target="_blank" class="social-links__link"><img src="icons/icon-facebook.svg" alt="facebook"></a></li>
+                        <li class="footer-links__col-item"><a href="https://instagram.com" target="_blank" class="social-links__link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-instagram" viewBox="0 0 24 24" style="width: 24px"><g fill="#8D8D8D" fill-rule="nonzero"><path d="M12 2.182c3.196 0 3.575.011 4.839.07 1.168.053 1.803.25 2.224.415.558.217.958.477 1.376.894.417.418.677.818.894 1.376.165.42.358 1.056.414 2.224.057 1.264.07 1.643.07 4.839 0 3.196-.01 3.575-.07 4.839-.052 1.168-.249 1.803-.414 2.224a3.721 3.721 0 0 1-.894 1.376 3.721 3.721 0 0 1-1.376.894c-.42.165-1.056.358-2.224.414-1.264.057-1.643.07-4.839.07-3.196 0-3.575-.01-4.839-.07-1.168-.052-1.803-.249-2.224-.414a3.721 3.721 0 0 1-1.376-.894 3.721 3.721 0 0 1-.894-1.376c-.165-.42-.358-1.056-.414-2.224-.057-1.264-.07-1.643-.07-4.839 0-3.196.01-3.575.07-4.839.052-1.168.249-1.803.414-2.224.217-.558.477-.958.894-1.376a3.721 3.721 0 0 1 1.376-.894c.42-.165 1.056-.358 2.224-.414 1.264-.06 1.643-.07 4.839-.07zm0-2.157c-3.253 0-3.66.014-4.937.073-1.274.06-2.144.26-2.909.558a5.78 5.78 0 0 0-2.119 1.38A5.895 5.895 0 0 0 .653 4.157C.358 4.919.154 5.789.095 7.067.035 8.344.02 8.75.02 12.004c0 3.252.014 3.66.074 4.936.06 1.274.26 2.144.558 2.91a5.853 5.853 0 0 0 1.382 2.115 5.895 5.895 0 0 0 2.123 1.382c.761.295 1.631.499 2.909.558 1.277.06 1.684.074 4.937.074 3.252 0 3.66-.014 4.936-.074 1.274-.06 2.144-.26 2.91-.558a5.853 5.853 0 0 0 2.115-1.382 5.895 5.895 0 0 0 1.382-2.123c.295-.761.499-1.631.558-2.909.06-1.277.074-1.684.074-4.937 0-3.252-.014-3.66-.074-4.936-.06-1.274-.26-2.144-.558-2.91a5.853 5.853 0 0 0-1.382-2.115A5.895 5.895 0 0 0 19.842.653c-.761-.295-1.631-.499-2.909-.558C15.66.039 15.253.025 12 .025z"></path><path d="M12 5.85a6.152 6.152 0 1 0 .001 12.302A6.152 6.152 0 0 0 12 5.85zm0 10.143a3.993 3.993 0 1 1 0-7.986 3.993 3.993 0 0 1 0 7.986z"></path><circle cx="18.393" cy="5.607" r="1.439"></circle></g></svg></a></li>
+                        <li class="footer-links__col-item"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-links__link"><img src="icons/icon-youtube.svg" alt="youtube"></a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
+
             <div class="footer-lang-select">
                 <select name="footer-lang" class="js-footer-lang_select-single">
                     <option value="EN"></option>
@@ -326,9 +401,8 @@
                     <option value="UA"></option>
                 </select>
             </div>
-            <div class="copyright">
-                © 2019. Roval Components. All Rights Reserved.
-            </div>
+
+            <div class="footer-copyright">© 2019. Roval Components. All Rights Reserved.</div>
         </div>
     </footer>
 </body>

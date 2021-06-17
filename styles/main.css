@@ -1,16 +1,7 @@
-/*
-
-    main
-
-*/
-main {
-    min-height: var(--main-min-height);
+.main {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
     background: white;
-    z-index: -1;
-    padding: var(--main-top-padding) 15% var(--main-bottom-padding) 15%;
+    flex-grow: 1;
 }
-/*
-
-    main
-    end
-*/

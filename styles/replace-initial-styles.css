@@ -1,32 +1,50 @@
-/*
-
-    replace initial styles
-
-*/
 html, body {
-    min-height: 100%;
-    background-color: black;
+    min-height: 100vh;
 }
+
 body {
     margin: 0;
-    overflow-x: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
+
 ul {
     margin: 0;
     padding: 0;
 }
+
 li {
     list-style: none;
 }
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
-/*
 
-    replace initial styles
-    end
-*/
+button {
+    background-color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
